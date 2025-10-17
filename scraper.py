@@ -106,7 +106,7 @@ def scrape_logos_final(parquet_file_path: str, output_csv_path: str, domain_colu
             
             print(f" -> Result for {domain}: {status}\n")
 
-    print(f"\n Scraping complete. Results saved to '{output_csv_path}'")
+    print(f"\n Scraping complete. Rezultate la '{output_csv_path}'")
 
 if __name__ == "__main__":
     file_path = r'C:\Users\Florin\Documents\Veridion Assesment\logos.snappy.parquet'
