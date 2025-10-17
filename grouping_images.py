@@ -77,7 +77,7 @@ def main(csv_path):
     try:
         df = pd.read_csv(csv_path)
         if not all(col in df.columns for col in [LOGO_URL_COLUMN, DOMAIN_NAME_COLUMN]):
-            print(f"Coloanele '{LOGO_URL_COLUMN}' și '{DOMAIN_NAME_COLUMN}' trebuie să existe în {csv_path}!", file=sys.stderr)
+            print(f"Coloanele '{LOGO_URL_COLUMN}' și '{DOMAIN_NAME_COLUMN}' trebuie să existe in {csv_path}!", file=sys.stderr)
             return
     except FileNotFoundError:
         print(f"Fișierul {csv_path} nu a fost găsit!", file=sys.stderr)
@@ -94,7 +94,7 @@ def main(csv_path):
         print("\nNu au fost procesate suficiente imagini pentru a forma grupuri.")
         return
 
-    print("\nConstruiesc graful de similarități...")
+    print("\nConstruire graf...")
     G = nx.Graph()
     nodes = [item['domain'] for item in processed_data]
     G.add_nodes_from(nodes)
@@ -112,7 +112,7 @@ def main(csv_path):
     
     clusters = list(nx.connected_components(G))
     
-    print(f"\nProces finalizat. Se scriu rezultatele în fișierul '{OUTPUT_FILENAME}'...")
+    print(f"\nProces finalizat. Scriere Rezultate '{OUTPUT_FILENAME}'...")
     
     with open(OUTPUT_FILENAME, 'w', encoding='utf-8') as f:
 
@@ -126,8 +126,6 @@ def main(csv_path):
             f.write("\n")
             cluster_num += 1
                  
-    print("Salvare completă.")
-
 if __name__ == '__main__':
     csv_file_path = r'C:\Users\Florin\Documents\Veridion Assesment\logos_output.csv'
     main(csv_file_path)
