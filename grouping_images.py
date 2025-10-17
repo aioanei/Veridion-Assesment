@@ -12,8 +12,8 @@ import cairosvg
 LOGO_URL_COLUMN = 'logo_url'
 DOMAIN_NAME_COLUMN = 'domain_name'
 OUTPUT_FILENAME = 'clustere_logo.txt'
-GRAY_VECTOR_THRESHOLD = 0.10
-COLOR_VECTOR_THRESHOLD = 0.10 
+GRAY_VECTOR_THRESHOLD = 0.05
+COLOR_VECTOR_THRESHOLD = 0.05
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36',
